@@ -1,0 +1,10 @@
+/* google font --------------------------------------- */
+@import url('https://fonts.googleapis.com/css2?family=Geist:wght@100..900&display=swap');
+
+/* tailwind import ----------------------------------- */
+@import "tailwindcss";
+
+/* font set ------------------------------------------ */
+.font-geist {
+    font-family: "Geist", sans-serif;
+}
