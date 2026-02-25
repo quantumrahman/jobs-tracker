@@ -25,15 +25,15 @@
                 <div class="w-full grid grid-cols-1 gap-4 sm:grid-cols-3">
                     <div class="w-full p-5 bg-white border border-[#F1F2F4] rounded-lg space-y-2">
                         <p class="text-[#323B49] text-sm font-medium">Total</p>
-                        <span class="text-[#002C5C] text-2xl font-bold">0</span>
+                        <span class="text-[#002C5C] text-2xl font-bold totalJobsCount">0</span>
                     </div>
                     <div class="w-full p-5 bg-white border border-[#F1F2F4] rounded-lg space-y-2">
                         <p class="text-[#323B49] text-sm font-medium">Interview</p>
-                        <span class="text-[#10B981] text-2xl font-bold">0</span>
+                        <span class="text-[#10B981] text-2xl font-bold totalInterviewCount">0</span>
                     </div>
                     <div class="w-full p-5 bg-white border border-[#F1F2F4] rounded-lg space-y-2">
                         <p class="text-[#323B49] text-sm font-medium">Rejected</p>
-                        <span class="text-[#EF4444] text-2xl font-bold">0</span>
+                        <span class="text-[#EF4444] text-2xl font-bold totalRejectedCount">0</span>
                     </div>
                 </div>
             </div>
@@ -43,43 +43,15 @@
             <div class="w-full space-y-6">
                 <div class="w-full flex items-center justify-between">
                     <h2 class="text-[#002C5C] text-xl font-semibold">Available Jobs</h2>
-                    <p class="text-[#64748B] text-base font-medium"><span>0</span> jobs</p>
+                    <p class="text-[#64748B] text-base font-medium"><span id="job-count">0</span> jobs</p>
                 </div>
                 <div class="w-full space-x-2">
-                    <button class="w-full max-w-20 py-2 px-3 bg-white border border-[#F1F2F4] rounded-sm text-[#64748B] text-xs font-medium cursor-pointer">All</button>
-                    <button class="w-full max-w-20 py-2 px-3 bg-white border border-[#F1F2F4] rounded-sm text-[#64748B] text-xs font-medium cursor-pointer">Interview</button>
-                    <button class="w-full max-w-20 py-2 px-3 bg-white border border-[#F1F2F4] rounded-sm text-[#64748B] text-xs font-medium cursor-pointer">Rejected</button>
+                    <button class="w-full max-w-20 py-2 px-3 bg-white border border-[#F1F2F4] rounded-sm text-[#64748B] text-xs font-medium cursor-pointer active" id="all-jobs-tab">All</button>
+                    <button class="w-full max-w-20 py-2 px-3 bg-white border border-[#F1F2F4] rounded-sm text-[#64748B] text-xs font-medium cursor-pointer" id="interview-jobs-tab">Interview</button>
+                    <button class="w-full max-w-20 py-2 px-3 bg-white border border-[#F1F2F4] rounded-sm text-[#64748B] text-xs font-medium cursor-pointer" id="rejected-jobs-tab">Rejected</button>
                 </div>
-                <div class="w-full space-y-4 pb-[60px]">
+                <div id="job-container" class="w-full space-y-4 pb-[60px]">
                     <!-- dynamic data from js ------------------------- -->
-                    <div class="w-full p-6 bg-[#ffffff] border border-[#F1F2F4] rounded-lg space-y-5">
-                        <div class="w-full flex items-center justify-between">
-                            <div class="w-auto space-y-1">
-                                <p class="font-geist text-[#002C5C] text-lg font-semibold capitalize">${job.company}</p>
-                                <p class="font-geist text-[#64748B] text-base font-normal capitalize">${job.title}</p>
-                            </div>
-                            <div class="w-10 h-10 bg-[#ffffff] border border-[#F1F2F4] rounded-full flex items-center justify-center cursor-pointer">
-                                <i class="fa-regular fa-trash-can text-sm text-[#64748B]"></i>
-                            </div>
-                        </div>
-                        <div class="w-full flex items-center justify-start gap-2">
-                            <p class="font-geist text-[#64748B] text-sm font-normal capitalize">${job.location}</p>
-                            <i class="fa-solid fa-circle text-[4px] text-[#64748B]"></i>
-                            <p class="font-geist text-[#64748B] text-sm font-normal capitalize">${job.type}</p>
-                            <i class="fa-solid fa-circle text-[4px] text-[#64748B]"></i>
-                            <p class="font-geist text-[#64748B] text-sm font-normal capitalize">${job.salary}</p>
-                        </div>
-                        <div class="w-full space-y-2">
-                            <div class="job-badge w-[115px] py-2 px-3 bg-[#EEF4FF] border border-[#EEF4FF] rounded-sm text-center">
-                                <span class="job-status font-geist text-[#002C5C] text-sm font-medium uppercase">${job.status}</span>
-                            </div>
-                            <p class="font-geist text-[#323B49] text-sm font-normal">${job.description}</p>
-                        </div>
-                        <div class="w-full flex items-center justify-start gap-2">
-                            <button class="job-btn w-[100px] py-2 px-3 bg-[#10B981]/10 border border-[#10B981] rounded-sm font-geist text-[#10B981] text-sm font-semibold uppercase cursor-pointer">interview</button>
-                            <button class="job-btn w-[100px] py-2 px-3 bg-[#EF4444]/10 border border-[#EF4444] rounded-sm font-geist text-[#EF4444] text-sm font-semibold uppercase cursor-pointer">rejected</button>
-                        </div>
-                    </div>
                 </div>
             </div>
         </main>
