@@ -14,3 +14,13 @@
     border-color: #3B82F6;
     color: white;
 }
+
+.int-badge-active {
+    background-color: color-mix(in oklab, #10B981 10%, transparent);
+    border-color: color-mix(in oklab, #10B981 10%, transparent);
+}
+
+.rej-badge-active {
+    background-color: color-mix(in oklab, #EF4444 10%, transparent);
+    border-color: color-mix(in oklab, #EF4444 10%, transparent);
+}
